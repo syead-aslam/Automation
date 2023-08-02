@@ -1,0 +1,84 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query($charaterId: Int!,$episodeId: Int!){\n  character(characterId: $charaterId) \n  {\n    name\n    gender\n    type\n    status\n    id\n  }\n  location(locationId:16)\n  {\n    name\n    dimension\n  }\n  episode(episodeId:$episodeId)\n  {\n    name\n    air_date\n    episode\n  }\n  characters(filters:{name:\"Jenin\"} )\n  {\n    info{\n      count\n    }\n    result{\n      name\n      type\n    }\n  }\n}",
+    "variables": {
+        "charaterId": 14,
+        "episodeId": 16
+    }
+}
+HTTP/1.1 200 OK
+Date: Mon, 31 Jul 2023 18:32:27 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 389
+ETag: W/"185-Pqj1hkFsPBdseeAfJcEPPsomqUE"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "character": {
+            "name": "Jenin",
+            "gender": "male",
+            "type": "macho",
+            "status": "alive",
+            "id": 14
+        },
+        "location": {
+            "name": "India",
+            "dimension": "234"
+        },
+        "episode": {
+            "name": "Sacred games",
+            "air_date": "29-12-1999",
+            "episode": "11th"
+        },
+        "characters": {
+            "info": {
+                "count": 4
+            },
+            "result": [
+                {
+                    "name": "Jenin",
+                    "type": "macho"
+                },
+                {
+                    "name": "Jenin",
+                    "type": "macho"
+                },
+                {
+                    "name": "Jenin",
+                    "type": "macho"
+                },
+                {
+                    "name": "Jenin",
+                    "type": "macho"
+                }
+            ]
+        }
+    }
+}
