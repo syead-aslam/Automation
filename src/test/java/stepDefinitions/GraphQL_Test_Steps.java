@@ -53,8 +53,8 @@ public class GraphQL_Test_Steps extends Api_Utils {
         String EpisodeName = js.getString("data.episode.name");
         System.out.println(EpisodeName);
         Assert.assertEquals(EpisodeName,"Sacred games");
-        String air_date = js.getString("data.episode.air_date");
-        System.out.println(air_date);
+        String Air_date = js.getString("data.episode.air_date");
+        System.out.println(Air_date);
         Integer count = js.getInt("data.characters.info.count");
         System.out.println(count);
         Assert.assertEquals(count,4);
