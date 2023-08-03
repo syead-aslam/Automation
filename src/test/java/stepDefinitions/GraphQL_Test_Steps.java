@@ -54,6 +54,7 @@ public class GraphQL_Test_Steps extends Api_Utils {
         System.out.println(EpisodeName);
         Assert.assertEquals(EpisodeName,"Sacred games");
         Integer count = js.getInt("data.characters.info.count");
+        System.out.println(count);
         Assert.assertEquals(count,4);
 
     }
